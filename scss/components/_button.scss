@@ -1,0 +1,22 @@
+$button-color: rgb(228, 169, 228);
+$outline-color: rgb(151, 122, 151);
+
+.button {
+  padding: 10px 40px;
+  margin: 5px 0;
+  background-color: $button-color;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.button:focus {
+  outline-color: $outline-color;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:active {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
