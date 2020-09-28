@@ -1,12 +1,13 @@
-$button-color: rgb(228, 169, 228);
-$outline-color: rgb(151, 122, 151);
+$button-color: #f7baaf00;
+$outline-color: rgb(224, 196, 169);
 
 .button {
   padding: 10px 40px;
   margin: 5px 0;
   background-color: $button-color;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+
+  transition-duration: 0.5s;
 }
 
 .button:focus {
@@ -15,6 +16,14 @@ $outline-color: rgb(151, 122, 151);
 
 .button:hover {
   cursor: pointer;
+  background: #ffacbf; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffacbf,
+    #f79e8f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffacbf, #f79e8f);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .button:active {

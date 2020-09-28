@@ -1,9 +1,29 @@
 .header {
   display: flex;
-  padding: 50px 0px;
+  padding: 100px 0px;
   align-items: center;
 }
 
 .header-img {
   width: 40%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-text {
+  width: 60%;
+  padding: 0 20px;
+}
+
+.button {
+  display: block;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+h1 {
+  padding-bottom: 15px;
+}
+
+h3 {
+  padding-bottom: 15px;
 }
