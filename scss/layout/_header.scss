@@ -2,6 +2,11 @@
   display: flex;
   padding: 100px 0px;
   align-items: center;
+  justify-content: center;
+}
+
+.small {
+  padding: 30px 0px;
 }
 
 .header-img {
@@ -26,4 +31,15 @@ h1 {
 
 h3 {
   padding-bottom: 15px;
+}
+
+.icon-box {
+  width: 30%;
+  text-align: center;
+}
+
+.header-icon {
+  color: rgba(162, 186, 250, 0.8);
+  right: 0;
+  font-size: 15rem;
 }
