@@ -6,15 +6,15 @@
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.5);
-
+  background-color: rgba(255, 255, 255, 0.1);
   width: 30%;
+  min-height: 500px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   transition-duration: 0.5s;
 }
 
 .card:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .card-header {
@@ -31,22 +31,28 @@
 }
 
 .card-cat {
-  margin: 15px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
   background-color: rgb(163, 163, 163);
-  padding: 5px 9px;
+  padding: 2px 9px;
   border-radius: 20px;
+  width: fit-content;
+  align-items: center;
+  cursor: pointer;
 }
 
 .cat-red {
-  background-color: rgb(245, 137, 137);
+  background-color: rgba(255, 169, 169, 0.5);
 }
 
 .cat-blue {
-  background-color: rgb(150, 150, 236);
+  background-color: rgba(150, 150, 236, 0.5);
 }
 
 .cat-green {
-  background-color: rgb(174, 221, 174);
+  background-color: rgba(174, 221, 174, 0.5);
 }
 
 .card-title {
@@ -55,10 +61,16 @@
 
 .card-description {
   margin: 10px 20px;
+  text-align: justify;
 }
 
 .card-buttons {
   display: flex;
   justify-content: space-evenly;
   padding-bottom: 15px;
+}
+
+.card-icon {
+  font-size: 1.2rem;
+  margin: 0 4px;
 }

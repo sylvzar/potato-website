@@ -12,6 +12,7 @@
 .header-img {
   width: 40%;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
 }
 
 .header-text {
@@ -39,7 +40,17 @@ h3 {
 }
 
 .header-icon {
-  color: rgba(162, 186, 250, 0.8);
+  color: rgba(0, 0, 0, 0.3);
   right: 0;
   font-size: 15rem;
+}
+
+@media (max-width: 900px) {
+  .header-img {
+    display: none;
+  }
+
+  .header-text {
+    width: 100%;
+  }
 }
