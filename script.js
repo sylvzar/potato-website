@@ -6,11 +6,18 @@ const nav = document.querySelector('#nav');
 const tl = new TimelineMax();
 
 tl.fromTo(
-  headerimg,
+  header,
   1.5,
-  { width: '30%', left: '500px' },
-  { width: '50%', left: '0px', ease: Power2.easeInOut }
+  { padding: '0' },
+  { padding: '100px 0', ease: Power2.easeOut }
 )
+  .fromTo(
+    headerimg,
+    1.5,
+    { width: '50%', left: '1000px' },
+    { width: '50%', left: '0px', ease: Power2.easeInOut },
+    '-=0.5'
+  )
   .fromTo(
     headertext,
     1.5,
@@ -23,12 +30,5 @@ tl.fromTo(
     1.5,
     { opacity: '0%' },
     { opacity: '100%', ease: Power2.easeInOut },
-    '-=1.5'
-  )
-  .fromTo(
-    header,
-    1.5,
-    { padding: '0' },
-    { padding: '100px 0', ease: Power2.easeInOut },
     '-=1.5'
   );
