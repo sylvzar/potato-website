@@ -9,6 +9,10 @@ nav {
   font-size: 1.5rem;
 }
 
+.burgericon {
+  display: none;
+}
+
 ul {
   display: flex;
 
@@ -33,5 +37,58 @@ ul {
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+
+    .burgericon {
+      display: inline-block;
+      width: 100%;
+      margin-left: 50%;
+      cursor: pointer;
+
+      .bar1,
+      .bar2,
+      .bar3 {
+        width: 25px;
+        height: 2px;
+        background-color: black;
+        margin: 6px 0;
+        transition: 1s;
+      }
+    }
+    .change .bar1 {
+      -webkit-transform: rotate(45deg) translateY(0);
+      transform: rotate(45deg) translateY(11px) translateX(11px);
+    }
+
+    /* Fade out the second bar */
+    .change .bar2 {
+      opacity: 0;
+    }
+
+    /* Rotate last bar */
+    .change .bar3 {
+      -webkit-transform: rotate(-45deg) translateY(0);
+      transform: rotate(-45deg) translateY(0) translateX(0);
+    }
+  }
+
+  .logo {
+    padding-left: 15px;
+    padding-bottom: 10px;
+  }
+
+  ul {
+    display: inline-block;
+    text-align: center;
+    margin-left: -15px;
   }
 }

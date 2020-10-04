@@ -1,4 +1,4 @@
-const header = document.querySelector('#header');
+const header = document.querySelector('.header');
 const headertext = document.querySelector('#header-text');
 const headerimg = document.querySelector('#header-img');
 const nav = document.querySelector('#nav');
@@ -32,3 +32,36 @@ tl.fromTo(
     { opacity: '100%', ease: Power2.easeInOut },
     '-=1.5'
   );
+
+// Burger menu
+const burgermenu = document.querySelector('.burgermenu');
+const burgericon = document.querySelector('.burgericon');
+
+// Bar animation toggle
+function burgerToggle(x) {
+  x.classList.toggle('change');
+}
+
+// Menu display toggle on/off
+burgericon.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (window.getComputedStyle(burgermenu).display === 'block') {
+    burgermenu.style.display = 'none';
+  } else {
+    burgermenu.style.display = 'block';
+  }
+});
+
+// Media query for navbar visibility in desktop mode
+var x = window.matchMedia('(min-width: 800px)');
+mediaQuery(x); // Call listener function at run time
+x.addListener(mediaQuery); // Attach listener function on state changes
+
+function mediaQuery(x) {
+  if (x.matches) {
+    // If larger than 700px
+    burgermenu.style.display = 'flex';
+  } else {
+    burgermenu.style.display = 'none';
+  }
+}

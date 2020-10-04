@@ -29,3 +29,9 @@ footer {
     }
   }
 }
+
+@media (max-width: 500px) {
+  .map-box {
+    display: none;
+  }
+}
